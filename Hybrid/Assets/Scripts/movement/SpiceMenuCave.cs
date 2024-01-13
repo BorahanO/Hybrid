@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpiceMenu : MonoBehaviour
+public class SpiceMenuCave : MonoBehaviour
 {
     public GameObject IngredientScreen;
 
@@ -12,7 +12,8 @@ public class SpiceMenu : MonoBehaviour
 
     public string nameOfIngredient;
 
-    public static int PickedUpSpice1;
+
+    public static int PickedUpSpice2;
 
     private void Start()
     {
@@ -20,27 +21,27 @@ public class SpiceMenu : MonoBehaviour
         GameObject.Find("IngredientManager");
 
         InventoryManagement.InvManage.GetComponent<InventoryManagement>();
-
     }
 
     public void TakeSpiceWith()
     {
-        if(PickedUpSpice1 <= 0)
+        if (PickedUpSpice2 <= 0)
         {
             //player picks the option yes, they take the spice with them
 
             IngredientScreen.SetActive(false);
             Time.timeScale = 1;
 
-            PickedUpSpice1 = PickedUpSpice1 + 1;
+            PickedUpSpice2 = PickedUpSpice2 + 1;
 
-            InventoryManagement.InvManage.PickedUp1 = nameOfIngredient;
-            print(InventoryManagement.InvManage.PickedUp1);
-
+            InventoryManagement.InvManage.PickedUp2 = nameOfIngredient;
+            print(InventoryManagement.InvManage.PickedUp2);
+            
             InventoryManagement.InvManage.UpdateInventory();
 
             Destroy(Ingredient);
-        } else
+        }
+        else
         {
             tooManyItemsScreen.SetActive(true);
             IngredientScreen.SetActive(false);
@@ -58,7 +59,6 @@ public class SpiceMenu : MonoBehaviour
     public void TooManyItems()
     {
         //when player has too many items this screen comes up and they only have an "ok" option to continue
-
         tooManyItemsScreen.SetActive(false);
         Time.timeScale = 1;
     }

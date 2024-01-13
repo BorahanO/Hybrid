@@ -18,6 +18,8 @@ public class SpicePickup : MonoBehaviour
     {
         if (collision.gameObject.tag == playerTag)
         {
+            //activates the ingredient menu's
+
             IngredientScreen.SetActive(true);
 
             Time.timeScale = 0;
