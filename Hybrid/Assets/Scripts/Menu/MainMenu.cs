@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public void LoadNextScene()
     {
-        //SceneManager.LoadScene("SceneName");
+        SceneManager.LoadScene("Hub");
     }
     
     public void LoadEndScene()
