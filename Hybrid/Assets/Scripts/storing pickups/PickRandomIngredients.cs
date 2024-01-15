@@ -9,11 +9,11 @@ public class PickRandomIngredients : MonoBehaviour
     public List<string> IngredientsCave = new List<string>();
     public List<string> IngredientsSav = new List<string>();
     public List<string> IngredientsForest = new List<string>();
-
+    
     public string cave;
     public string sav;
     public string forest;
-
+    
     private void Awake()
     {
         OnlyIngredientManager();
@@ -22,7 +22,6 @@ public class PickRandomIngredients : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(this);
-
         IngredientsCave.Add("Gnomears");
         IngredientsCave.Add("Spider Claws");
         IngredientsCave.Add("Fairy Greaves");
@@ -40,10 +39,9 @@ public class PickRandomIngredients : MonoBehaviour
         RandomizeCave();
         RandomizeSav();
         RandomizeForest();
-
     }
 
-
+    
     public void RandomizeCave()
     {
         GetRandomItem(IngredientsCave);

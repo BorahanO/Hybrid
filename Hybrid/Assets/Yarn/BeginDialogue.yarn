@@ -1,0 +1,16 @@
+﻿title: Start
+---
+<<set $caveIngredient to "">>
+<<set $savIngredient to "">>
+<<set $forestIngredient to "">>
+
+<<set $setCaveIngredient to "cave">>
+
+<<set $savIngredient to "sav">>
+
+<<set $forestIngredient to "forest">>
+
+my ingredient is { getCaveIngredient() }
+<<setCaveIngredient>> 
+now it is { getCaveIngredient() }
+===
