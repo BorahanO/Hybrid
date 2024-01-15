@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpiceMenuForest : MonoBehaviour
 {
+    public static SpiceMenuForest forestMenu;
+
     public GameObject IngredientScreen;
 
     public GameObject tooManyItemsScreen;
@@ -18,6 +20,7 @@ public class SpiceMenuForest : MonoBehaviour
     {
 
         GameObject.Find("IngredientManager");
+        GameObject.Find("InventoryPictures");
 
         InventoryManagement.InvManage.GetComponent<InventoryManagement>();
     }
@@ -37,6 +40,7 @@ public class SpiceMenuForest : MonoBehaviour
             print(InventoryManagement.InvManage.PickedUp3);
 
             InventoryManagement.InvManage.UpdateInventory();
+            InventoryManagement.InvManage.ForestInvUpdate();
 
             Destroy(Ingredient);
         }

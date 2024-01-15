@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpiceMenuCave : MonoBehaviour
 {
+    public static SpiceMenuCave caveMenu;
+
     public GameObject IngredientScreen;
 
     public GameObject tooManyItemsScreen;
@@ -19,6 +21,7 @@ public class SpiceMenuCave : MonoBehaviour
     {
 
         GameObject.Find("IngredientManager");
+        GameObject.Find("inventory");
 
         InventoryManagement.InvManage.GetComponent<InventoryManagement>();
     }
@@ -38,6 +41,7 @@ public class SpiceMenuCave : MonoBehaviour
             print(InventoryManagement.InvManage.PickedUp2);
             
             InventoryManagement.InvManage.UpdateInventory();
+            InventoryManagement.InvManage.CaveInvUpdate();
 
             Destroy(Ingredient);
         }

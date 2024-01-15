@@ -21,6 +21,8 @@ public class PickRandomIngredients : MonoBehaviour
 
     void Start()
     {
+        InventoryManagement.InvManage.GetComponent<InventoryManagement>();
+
         DontDestroyOnLoad(this);
         IngredientsCave.Add("Gnomears");
         IngredientsCave.Add("Spider Claws");
@@ -33,12 +35,14 @@ public class PickRandomIngredients : MonoBehaviour
         IngredientsSav.Add("Demphuree");
 
         IngredientsForest.Add("Snees Grass");
-        IngredientsForest.Add("Tong melt");
+        IngredientsForest.Add("Tong Melt");
         IngredientsForest.Add("Deathkiss");
 
         RandomizeCave();
         RandomizeSav();
         RandomizeForest();
+
+        InventoryManagement.InvManage.UpdateList();
     }
 
     

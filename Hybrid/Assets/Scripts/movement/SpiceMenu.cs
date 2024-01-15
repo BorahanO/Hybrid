@@ -38,6 +38,7 @@ public class SpiceMenu : MonoBehaviour
             print(InventoryManagement.InvManage.PickedUp1);
 
             InventoryManagement.InvManage.UpdateInventory();
+            InventoryManagement.InvManage.SavInvUpdate();
 
             Destroy(Ingredient);
         } else
