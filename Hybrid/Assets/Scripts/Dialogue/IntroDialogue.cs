@@ -7,6 +7,32 @@ namespace Dialogue
     {
         [SerializeField] private PickRandomIngredients ingredients;
         [SerializeField] private TextMeshProUGUI listtext;
+        [SerializeField] private GameObject DialogueWindow;
+        static bool DialogueViewed;
+        
+        private void Start()
+        {
+            TurnOnDialogue();
+            DontDestroyOnLoad(this);
+        }
+
+        private void TurnOnDialogue()
+        {
+            if (!DialogueViewed)
+            {
+                DialogueWindow.SetActive(true);
+            }
+            else
+            if (DialogueViewed)
+            {
+                DialogueWindow.SetActive(false);
+            }
+        }
+
+        public void EndDialogue()
+        {
+            DialogueViewed = true;
+        }
 
         void Update()
         {
