@@ -711,8 +711,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 550.79065, y: 354.18692}
-  m_SizeDelta: {x: 1101, y: 710}
+  m_AnchoredPosition: {x: 549.39905, y: 350.70776}
+  m_SizeDelta: {x: 1131.6172, y: 730.8751}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5466923912536101056
 CanvasRenderer:
@@ -783,7 +783,7 @@ Transform:
   m_Children:
   - {fileID: 5466923912536101062}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5466923912883867469
 MonoBehaviour:
@@ -798,4 +798,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IngredientScreen: {fileID: 5466923912536101061}
+  tooManyItemsScreen: {fileID: 0}
   Ingredient: {fileID: 0}
+  nameOfIngredient: 

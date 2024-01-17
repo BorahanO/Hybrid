@@ -9,6 +9,8 @@ namespace Dialogue
         [SerializeField] private TextMeshProUGUI listtext;
         [SerializeField] private GameObject DialogueWindow;
         static bool DialogueViewed;
+
+        public GameObject invIngredients;
         
         private void Start()
         {
@@ -21,17 +23,26 @@ namespace Dialogue
             if (!DialogueViewed)
             {
                 DialogueWindow.SetActive(true);
+                Time.timeScale = 0;
+
+                invIngredients.SetActive(false);
             }
             else
             if (DialogueViewed)
             {
                 DialogueWindow.SetActive(false);
+                Time.timeScale = 1;
+
+                invIngredients.SetActive(true);
             }
         }
 
         public void EndDialogue()
         {
             DialogueViewed = true;
+            Time.timeScale = 1;
+
+            invIngredients.SetActive(true);
         }
 
         void Update()
